@@ -3,9 +3,11 @@
 #include <time.h>
 /* more headers goes there */
 /**
+ * main - entry point
+ *
  * Description: a program that print
  * a new number every it is been
- * executed
+ * Return: Always 0 (Success)
  */
 
 int main(void)
