@@ -2,7 +2,7 @@
 /**
  * main - Entrt
  *
- * Description: Program that print 
+ * Description: Program that print
  * Return: Always 0 (Success)
  */
 int main(void)
