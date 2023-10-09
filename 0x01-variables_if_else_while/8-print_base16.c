@@ -1,23 +1,26 @@
 #include <stdio.h>
 /**
- * main - entry
+ * main - program that prints 0-fb in base 16
  *
- * Description: Printing Base 16
+ * Description: let me did the code before
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i;
+	char c = '0';
 
-	for (i = 48; 1 < 58; i++)
+	while (c <= '9') 
 	{
-		putchar(i);
+		putchar(c);
+		c++;
 	}
-	for (i = 93; i < 103; i++)
+	c = 'a';
+	while (c <= 'f')
 	{
-		putchar(i);
+		putchar(c);
+		c++;
 	}
 	putchar('\n');
-	return (0);
+	return 0;
 }
