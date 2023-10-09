@@ -7,29 +7,17 @@
  */
 int main(void)
 {
-	int i = 0;
+	int n;
 
-	while (i < 10)
+	for (n = 48; n < 58; n++)
 	{
-		int j = i + 1;
-		while (j < 10)
+		putchar(n);
+		if (n != 57)
 		{
-			putchar(i + '0');
 			putchar(',');
 			putchar(' ');
-			putchar(j + '0');
-			if (i == 8 && j == 9)
-			{
-				putchar('\n');
-			}
-			else
-			{
-				putchar(',');
-				putchar(' ');
-			}
-			j++;
 		}
-		i++;
 	}
-	return 0;
+	putchar('\n');
+	return (0);
 }
