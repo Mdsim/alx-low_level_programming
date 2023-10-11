@@ -2,8 +2,7 @@
 /**
  * main - entry
  *
- * print_alphabet - A program that print alphabets
- * void print_alphabet(void):wq
+ * Description: void print_alphabet(void):wq
  */
 void print_alphabet(void)
 {
