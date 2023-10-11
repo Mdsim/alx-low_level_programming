@@ -1,8 +1,9 @@
 #include "main.h"
 /**
  * main - entry
+ *
  * Description: A program that print alphabets
- * in small letter
+ * void print_alphabet(void):wq
  *
  * Return: Always 0 (Success)
  */
