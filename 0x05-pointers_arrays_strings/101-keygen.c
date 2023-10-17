@@ -2,45 +2,34 @@
 #include <stdlib.h>
 #include <time.h>
 
-/*The length of the password*/
-#define PASSWORD_LENGTH 10
-
-/*The characters that are allowed in the password*/
-char characters[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-char *password = malloc(PASSWORD_LENGTH + 1);
-
-/*Generates a random password*/
-char *generate_password() {
-  /*Seed the random number generator with the current time*/
-  srand(time(NULL));
-
-  /*Allocate memory for the password*/
-  if (password == NULL) {
-    return NULL;
-  }
-
-  /*Generate a random password character by character*/
-  for (int i = 0; i < PASSWORD_LENGTH; i++) {
-    password[i] = characters[rand() % sizeof(characters)];
-  }
-
-  /*Terminate the password with a null character*/
-  password[PASSWORD_LENGTH] = '\0';
-
-  /*Return the password*/
-  return password;
-}
-
-int main()
+/**
+ * main - program that generates random valid
+ * passwords for the program 101-crackme
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
 {
-  /*Generate a random password*/
-  char *password = generate_password();
+	int pass[100];
+	int i, sum, n;
 
-  /*Print the password to the console*/
-  printf("Password: %s\n", password);
+	sum = 0;	
 
-  /*Free the memory allocated for the password*/
-  free(password);
+	srand(time(NULL));
 
-  return 0;
+	for (i = 0; i < 100; i++)
+	{
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
+		if ((2772 - sum) - '0' < 78)
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
+			break;
+		}
+	}
+
+	return (0);
 }
